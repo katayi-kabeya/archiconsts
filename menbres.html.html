@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="styla.css">
+    <link rel="stylesheet" href="animate.css-main/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+        .team-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 20px auto 0;
+            display: block;
+            border: 4px solid #eaeaea;
+        }
+
+        .card {
+            text-align: center;
+            padding-top: 10px;
+
+
+        }
+
+        .card:hover .team-img {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+    </style>
+
+
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Our Team
+            Members</h1>
+        <div class="row" id="image">
+            <!-- Cards will be dynamically added
+    here -->
+        </div>
+    </div>
+    <!-- Bootstrap Bundle (includes Popper.js)
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@
+    5.3.0-alpha1/dist/js/bootstrap.bundle.min
+    .js"></script>
+    <script>
+        // Example data for team members
+        const teamMembers = [
+            {
+                name: "LOPEMBA Merdy"
+                ,
+                role: "directeur général ingénieur en Batiment et travaux public spécialste en infrastructure et transport il assure la coordination général des projets la gestion stratégique et le développement durable de l'entreprise"
+
+                ,
+                photo: "image/IMG-20251229-WA0003 (1) (1).jpg"
+
+            },
+            {
+                name: "KABOLA Divin"
+                ,
+                role: "Directeur adjoint ingénieur en batiment et travaux public spécialiste en structure responsable  de la planification du suivi et du controle du travaux il assure la bonne mise en oeuvre des projets sur le terain conformément aux normes technique et de sécurité "
+                ,
+                photo:
+                    "image/IMG-20251229-WA0005 (1) (1).jpg"
+
+            },
+            {
+                name: "MUSUNGAY Peter"
+                ,
+                role: "directeur techinque ingénerieur en batiment et travaux public spécialistes en constructions industrielle des batiment responsable de l'orientation technique des chantier il pilote les aspects technique des travaux encadre les equipes valide les choix constructifs et veille a la stabilité a la durabilité et a la sécurité des ouvrages realisés "
+                ,
+                photo:
+                    "image/IMG-20251229-WA0004 (1) (1).jpg"
+
+            },
+            {
+                name: "KIBALA Christian"
+                ,
+                role: "directeur de projets ingenieur en batiment et travaux public spécialiste en geotechnique responsable de la planification de l'execution et du suivi des projets de l'entreprise il assure la coordination des equipes la gestion des budj=gets et des ressourece et veille a ce que chaque projet atteigne ses objectif dans le respectdes delais et des standarts de qualite"
+                ,
+                photo:
+                    "image/IMG-20251229-WA0007 (1) (1).jpg"
+
+            },
+
+            {
+                name: "MANASSE"
+                ,
+                role: "architecte généraliste concoit des batiments tels que maisons,bureaux,ecole,immeuble,etc realise les plans en 2D et en 3D pour visualiser le projet "
+                ,
+                photo:
+                    "image/IMG-20251229-WA0007 (1) (1).jpg"
+
+            }
+        ];
+        // Reference to the container
+        const teamContainer =
+            document.getElementById('image');
+        // Generate cards dynamically
+        teamMembers.forEach(member => {
+            const card =
+                document.createElement('div');
+            card.classList.add('col-md-4'
+                ,
+                'col-lg-3'
+                ,
+                'mb-4');
+            card.innerHTML =
+                `
+    <div class=
+    "card">
+    <img src="${member.photo}" class="team-img" alt="${member.name}">
+    <div class=
+    "card-body">
+    <h5 class=
+    "card-title">${member.name}</h5>
+    <p class=
+    "card-text
+    text-muted">${member.role}</p>
+    </div>
+    </div>
+    `
+                ;
+            teamContainer.appendChild(card);
+        });
+    </script>
+
+
+    <footer class="text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weigt-bold text-warning">company Name</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore, eveniet ut distinctio
+                        libero
+                        quisquam voluptatibus eius tempora possimus hic, cum voluptas debitis dolore suscipit. Similique
+                        nisi illo
+                        eius accusamus.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 max-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weigt-bold text-warning">horaire</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">lundi a 8H a 17H</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Mardi 8H a 17H</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">jeudi 8H a 17H</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">vendredi 8H a 17H</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Samedi 8H a 14H</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weigt-bold text-warning">contact</h5>
+                    <p>
+                        <i class="fa-solid fa-house"></i> KINSHASA,NY 2333,US
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-envelope"></i> merdylopemba@gmail.com
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i> 0843291488
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-print"></i> 0896036044
+                    </p>
+
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p> copyright 02020 all rights reserved by:
+                        <a href="#" style="text-decoration: nome;">
+                            <strong class="text-warning">THE providers</strong>
+                        </a>
+                    </p>
+
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://web.facebook.com/merdy.shako" class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px;"><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://wa.me/0974601345" class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px;"><i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://web.instagram.com/" class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px;"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
